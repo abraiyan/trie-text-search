@@ -7,6 +7,7 @@ class MakeNode {
   }
 }
 
+//adding word to tree recursively
 function add(str, i, root) {
   if (i === str.length) {
     root.isTerminal = true
@@ -21,6 +22,7 @@ function add(str, i, root) {
   add(str, i + 1, root.map[str[i]])
 }
 
+//searching word from tree recursively
 function search(str, i, root) {
   if (i === str.length) {
     return root.words
